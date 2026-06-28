@@ -5,9 +5,7 @@ SmartNest is a full-stack property rental and booking platform where property ow
 
 ## 🌐 Live Demo
 
-- **Live Website:https://smart-nest-kappa.vercel.app
-- **Client Repository:https://github.com/anika-chhoa/smart-nest.git
-- **Server Repository:https://github.com/anika-chhoa/smart-nest-server.git
+
 
 ---
 
