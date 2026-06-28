@@ -1,0 +1,118 @@
+
+@import "tailwindcss";
+@import "@heroui/styles"; 
+
+@theme {
+  /* ===== TAILWIND V4 CONFIGURATION ===== */
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-tertiary: var(--tertiary);
+
+  --color-foreground: var(--on-background);
+  --color-muted: var(--on-surface-variant);
+
+  --color-card: var(--surface-container);
+  --color-border: var(--outline);
+
+  --color-champagne: var(--champagne-accent);
+  --color-glass: var(--glass-bg-light);
+  --color-danger: var(--error);
+
+  /* New custom tokens */
+  --color-midnight-emerald: #043927;
+  --color-on-primary: var(--on-primary);
+
+  /* Fonts & Text sizes */
+  --font-body: "Hanken Grotesk", sans-serif;
+  --font-heading: "EB Garamond", serif;
+  --font-label-md: "Hanken Grotesk", sans-serif;
+  
+  --font-size-label-md: 0.95rem;
+  --line-height-label-md: 1.25rem;
+}
+
+@layer base {
+  :root {
+    /* ===== LIGHT MODE RAW HEX VALUES ===== */
+    --primary: #00234B;
+    --primary-container: #00234B;
+    --primary-fixed: #003366;
+    --primary-fixed-dim: #002a52;
+
+    --secondary: #C5A059;
+    --secondary-container: #fdd79a;
+    --secondary-fixed: #E5C185;
+    --secondary-fixed-dim: #e5c185;
+
+    --tertiary: #001B3D;
+    --tertiary-container: #001B3D;
+    --tertiary-fixed: #004080;
+    --tertiary-fixed-dim: #003366;
+
+    --background: #fcf9f8;
+    --surface: #fcf9f8;
+    --surface-dim: #dcd9d9;
+
+    --surface-container-lowest: #ffffff;
+    --surface-container-low: #f6f3f2;
+    --surface-container: #f0eded;
+    --surface-container-high: #eae7e7;
+    --surface-container-highest: #e5e2e1;
+
+    --on-background: #001B3D;
+    --on-surface: #001B3D;
+    --on-surface-variant: #414848;
+
+    --on-primary: #ffffff;
+    --on-secondary: #ffffff;
+    --on-tertiary: #ffffff;
+
+    --champagne-accent: #D4AF37;
+    --inverse-primary: #C5A059;
+
+    --error: #ba1a1a;
+    --error-container: #ffdad6;
+    --on-error: #ffffff;
+
+    --outline: #717878;
+    --outline-variant: #c1c8c7;
+
+    --glass-bg-light: rgba(255, 255, 255, 0.7);
+    --glass-bg-dark: rgba(10, 25, 47, 0.8);
+    --slate-gray: #717171;
+  }
+
+  .dark {
+    /* ===== DARK MODE RAW HEX VALUES ===== */
+    --background: #001B3D;
+    --surface: #001B3D;
+
+    --primary: #D4AF37;
+    --secondary: #C5A059;
+    --tertiary: #003366;
+
+    --on-background: #fcf9f8;
+    --on-surface: #fcf9f8;
+
+    --surface-container: #12304f;
+    --surface-container-high: #17385c;
+
+    --glass-bg-dark: rgba(10, 25, 47, 0.8);
+    --on-surface-variant: #dcd9d9;
+
+    --error: #ef4444;
+    --error-container: #7f1d1d;
+
+    --outline: #9ca3af;
+    --outline-variant: #6b7280;
+  }
+
+  body {
+    background: var(--background);
+    color: var(--on-background);
+    font-family: "Hanken Grotesk", sans-serif;
+  }
+}
