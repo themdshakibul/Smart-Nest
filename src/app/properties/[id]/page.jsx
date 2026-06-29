@@ -30,7 +30,7 @@ const PropertyDetailsPage = async ({ params }) => {
       const propertyId = property._id?.toString();
       const tenantId = user.id?.toString();
 
-      const baseUrl = process.env.NEXT_PUBLIC_URL;
+      const baseUrl = process.env.NEXT_PUBLIC_API_URL;
       const url = `${baseUrl}/api/favorites?tenantId=${tenantId}&propertyId=${propertyId}`;
 
       const res = await fetch(url, {

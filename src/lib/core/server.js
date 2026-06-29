@@ -1,9 +1,7 @@
 import "server-only";
 import { getUserToken } from "./session";
 
-const baseURL = process.env.NEXT_PUBLIC_URL;
-
-
+const baseURL = process.env.NEXT_PUBLIC_API_URL;
 
 export const serverFetch = async (path, token = null) => {
   const headers = {};
@@ -20,7 +18,7 @@ export const serverFetch = async (path, token = null) => {
 
 export const protectedFetch = async (path) => {
   const headers = {};
-  const token=await getUserToken();
+  const token = await getUserToken();
   if (token) {
     headers.authorization = `Bearer ${token}`;
   }
@@ -32,7 +30,12 @@ export const protectedFetch = async (path) => {
   return res.json();
 };
 
-export const serverMutation = async (path, data, action = "POST", token = null) => {
+export const serverMutation = async (
+  path,
+  data,
+  action = "POST",
+  token = null,
+) => {
   const headers = {
     "Content-Type": "application/json",
   };
@@ -54,7 +57,7 @@ export const protectedMutation = async (path, data, action = "POST") => {
   const headers = {
     "Content-Type": "application/json",
   };
-  const token=await getUserToken();
+  const token = await getUserToken();
   if (token) {
     headers.authorization = `Bearer ${token}`;
   }
@@ -72,8 +75,8 @@ export const serverDelete = async (path) => {
     "Content-Type": "application/json",
   };
 
-  const token=await getUserToken();
-  
+  const token = await getUserToken();
+
   if (token) {
     headers.authorization = `Bearer ${token}`;
   }

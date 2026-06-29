@@ -1,5 +1,4 @@
-
-const baseURL = process.env.NEXT_PUBLIC_URL || "";
+const baseURL = process.env.NEXT_PUBLIC_API_URL || "";
 
 export const getAllReviews = async () => {
   const res = await fetch(`${baseURL}/api/reviews`);
@@ -7,7 +6,7 @@ export const getAllReviews = async () => {
   return res.json();
 };
 
-// const baseURL = process.env.NEXT_PUBLIC_URL || "";
+// const baseURL = process.env.NEXT_PUBLIC_API_URL || "";
 
 // export const clientGetAllReviews = async () => {
 //   const res = await fetch(`${baseURL}/api/reviews`);

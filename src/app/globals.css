@@ -1,6 +1,5 @@
-
 @import "tailwindcss";
-@import "@heroui/styles"; 
+@import "@heroui/styles";
 
 @theme {
   /* ===== TAILWIND V4 CONFIGURATION ===== */
@@ -21,7 +20,7 @@
   --color-glass: var(--glass-bg-light);
   --color-danger: var(--error);
 
-  /* New custom tokens */
+  /* Custom tokens */
   --color-midnight-emerald: #043927;
   --color-on-primary: var(--on-primary);
 
@@ -29,85 +28,104 @@
   --font-body: "Hanken Grotesk", sans-serif;
   --font-heading: "EB Garamond", serif;
   --font-label-md: "Hanken Grotesk", sans-serif;
-  
+
   --font-size-label-md: 0.95rem;
   --line-height-label-md: 1.25rem;
 }
 
 @layer base {
   :root {
-    /* ===== LIGHT MODE RAW HEX VALUES ===== */
-    --primary: #00234B;
-    --primary-container: #00234B;
-    --primary-fixed: #003366;
-    --primary-fixed-dim: #002a52;
+    /* ===== LIGHT MODE — Midnight Navy × Champagne Gold ===== */
 
-    --secondary: #C5A059;
-    --secondary-container: #fdd79a;
-    --secondary-fixed: #E5C185;
-    --secondary-fixed-dim: #e5c185;
+    /* Primary — deep, prestigious navy */
+    --primary: #001a35;
+    --primary-container: #002654;
+    --primary-fixed: #003470;
+    --primary-fixed-dim: #00285a;
 
-    --tertiary: #001B3D;
-    --tertiary-container: #001B3D;
-    --tertiary-fixed: #004080;
-    --tertiary-fixed-dim: #003366;
+    /* Secondary — warm champagne gold, muted & refined */
+    --secondary: #b8903f;
+    --secondary-container: #f5dfa0;
+    --secondary-fixed: #d4a94e;
+    --secondary-fixed-dim: #c9a84c;
 
-    --background: #fcf9f8;
-    --surface: #fcf9f8;
-    --surface-dim: #dcd9d9;
+    /* Tertiary — cooler midnight for depth */
+    --tertiary: #001228;
+    --tertiary-container: #002040;
+    --tertiary-fixed: #003880;
+    --tertiary-fixed-dim: #002d66;
 
+    /* Backgrounds — warm off-white with cream undertone */
+    --background: #faf8f5;
+    --surface: #faf8f5;
+    --surface-dim: #ddd9d4;
+
+    /* Surface containers — blue-tinted neutrals */
     --surface-container-lowest: #ffffff;
-    --surface-container-low: #f6f3f2;
-    --surface-container: #f0eded;
-    --surface-container-high: #eae7e7;
-    --surface-container-highest: #e5e2e1;
+    --surface-container-low: #f3f0ec;
+    --surface-container: #eceae6;
+    --surface-container-high: #e4e1dc;
+    --surface-container-highest: #dcd9d4;
 
-    --on-background: #001B3D;
-    --on-surface: #001B3D;
-    --on-surface-variant: #414848;
+    /* Foreground / text */
+    --on-background: #0a1628;
+    --on-surface: #0a1628;
+    --on-surface-variant: #4a5568;
 
+    /* On-color text */
     --on-primary: #ffffff;
     --on-secondary: #ffffff;
     --on-tertiary: #ffffff;
 
-    --champagne-accent: #D4AF37;
-    --inverse-primary: #C5A059;
+    /* Accent */
+    --champagne-accent: #c9a84c;
+    --inverse-primary: #c9a84c;
 
-    --error: #ba1a1a;
-    --error-container: #ffdad6;
+    /* Status — error */
+    --error: #c0392b;
+    --error-container: #fdecea;
     --on-error: #ffffff;
 
-    --outline: #717878;
-    --outline-variant: #c1c8c7;
+    /* Borders */
+    --outline: #8896a7;
+    --outline-variant: #c8d0da;
 
-    --glass-bg-light: rgba(255, 255, 255, 0.7);
-    --glass-bg-dark: rgba(10, 25, 47, 0.8);
-    --slate-gray: #717171;
+    /* Glass effects */
+    --glass-bg-light: rgba(250, 248, 245, 0.75);
+    --glass-bg-dark: rgba(1, 15, 32, 0.85);
+    --slate-gray: #64748b;
   }
 
   .dark {
-    /* ===== DARK MODE RAW HEX VALUES ===== */
-    --background: #001B3D;
-    --surface: #001B3D;
+    /* ===== DARK MODE — True Midnight × Gold ===== */
+    --background: #010f20;
+    --surface: #010f20;
 
-    --primary: #D4AF37;
-    --secondary: #C5A059;
-    --tertiary: #003366;
+    /* Gold takes the primary role in dark */
+    --primary: #c9a84c;
+    --secondary: #b8903f;
+    --tertiary: #002d66;
 
-    --on-background: #fcf9f8;
-    --on-surface: #fcf9f8;
+    /* Text */
+    --on-background: #f0ede8;
+    --on-surface: #f0ede8;
+    --on-surface-variant: #a0abbe;
 
-    --surface-container: #12304f;
-    --surface-container-high: #17385c;
+    /* Surface containers — layered deep blues */
+    --surface-container: #0d2040;
+    --surface-container-high: #132848;
+    --surface-container-highest: #1a3055;
 
-    --glass-bg-dark: rgba(10, 25, 47, 0.8);
-    --on-surface-variant: #dcd9d9;
+    /* Glass */
+    --glass-bg-dark: rgba(1, 15, 32, 0.85);
 
-    --error: #ef4444;
-    --error-container: #7f1d1d;
+    /* Status */
+    --error: #fc5a5a;
+    --error-container: #7b1a1a;
 
-    --outline: #9ca3af;
-    --outline-variant: #6b7280;
+    /* Borders */
+    --outline: #4a5d75;
+    --outline-variant: #2e3f55;
   }
 
   body {
