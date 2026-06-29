@@ -1,66 +1,99 @@
-````markdown
+<div align="center">
+
+<img src="https://img.shields.io/badge/SmartNest-Property%20Rental%20Platform-6366f1?style=for-the-badge&logo=home&logoColor=white" alt="SmartNest Banner" />
+
 # 🏡 SmartNest
 
-SmartNest is a full-stack property rental and booking platform where property owners can list rental properties and tenants can discover, book, and securely pay reservation fees online. The platform provides a complete rental management system with role-based access control, secure authentication, online payments, booking management, analytics, and an intuitive dashboard for every user role.
+### A Modern Full-Stack Property Rental & Booking Platform
 
-## 🌐 Live Demo
+**SmartNest** is a production-ready rental management platform where property owners can list their properties and tenants can discover, book, and pay reservation fees — all in one place. Built with a modern tech stack, it offers role-based dashboards, secure authentication, Stripe payments, and real-time analytics.
 
+<<<<<<< HEAD
 
+=======
+[![Live Demo](https://img.shields.io/badge/🌐%20Live%20Demo-Visit%20Site-6366f1?style=for-the-badge)](https://smart-nest-kappa.vercel.app)
+[![Client Repo](https://img.shields.io/badge/GitHub-Client%20Repo-181717?style=for-the-badge&logo=github)](https://github.com/anika-chhoa/smart-nest.git)
+[![Server Repo](https://img.shields.io/badge/GitHub-Server%20Repo-181717?style=for-the-badge&logo=github)](https://github.com/anika-chhoa/smart-nest-server.git)
+
+</div>
+
+---
+
+## 📋 Table of Contents
+
+- [Overview](#overview)
+- [Features](#features)
+- [User Roles](#user-roles)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+- [Environment Variables](#environment-variables)
+- [Project Structure](#project-structure)
+- [Security](#security)
+- [Roadmap](#roadmap)
+- [Author](#author)
+
+---
+
+## 🌟 Overview
+
+SmartNest bridges the gap between property owners and tenants with a streamlined rental management experience. From property listing to booking approval and payment — everything is handled within a single, intuitive platform.
+>>>>>>> a167335 (add: git redmimd)
 
 ---
 
 ## ✨ Features
 
-- 🔐 JWT & Better Auth Authentication
-- 👥 Role-Based Access Control (Admin, Owner & Tenant)
-- 🏠 Property Listing & Management
-- 🔎 Search, Filter & Sorting
-- ❤️ Add Property to Favorites
-- 📅 Property Booking System
-- 💳 Secure Stripe Payment Integration
-- 📄 Booking History
-- 📊 Dashboard Analytics with Recharts
-- 📈 Monthly Earnings Chart
-- 📑 Property Approval & Rejection Workflow
-- 👨‍💼 Admin Dashboard
-- 👤 Owner Dashboard
-- 🙋 Tenant Dashboard
-- 📱 Fully Responsive Design
-- ⚡ Server-side Pagination
-- 🎨 Smooth Animations with Framer Motion
-- 🔥 Modern UI with HeroUI & Tailwind CSS
+| Category | Features |
+|---|---|
+| 🔐 **Authentication** | JWT, Better Auth, Social Login |
+| 👥 **Access Control** | Role-Based (Admin, Owner, Tenant) |
+| 🏠 **Property Management** | List, Update, Delete, Approve/Reject |
+| 🔎 **Discovery** | Search, Filter, Sort, Pagination |
+| 📅 **Booking System** | Request, Approve/Reject, History |
+| 💳 **Payments** | Stripe Integration, Transaction Records |
+| 📊 **Analytics** | Dashboard Charts, Monthly Earnings |
+| 📱 **UI/UX** | Fully Responsive, Framer Motion Animations |
+| ❤️ **Personalization** | Favorites, Reviews & Ratings |
 
 ---
 
 ## 👤 User Roles
 
-### 👨‍💼 Admin
+<details>
+<summary><b>👨‍💼 Admin</b></summary>
 
-- Manage all users
+- Manage all registered users
 - Change user roles
-- Approve or reject properties
-- Monitor all bookings
-- View transactions
-- Delete or update properties
+- Approve or reject property listings
+- Monitor all platform bookings
+- View transactions and platform activity
+- Update or remove any property
 
-### 🏠 Property Owner
+</details>
 
-- Add new properties
-- Update property information
-- Delete properties
-- View booking requests
-- Approve or reject bookings
-- View earnings analytics
+<details>
+<summary><b>🏠 Property Owner</b></summary>
 
-### 🙋 Tenant
+- Add and manage property listings
+- Update property details and availability
+- View and manage booking requests
+- Approve or reject tenant bookings
+- Track monthly earnings via analytics dashboard
 
-- Browse approved properties
-- Search & filter properties
-- Add favorites
-- Book properties
-- Pay reservation fees
-- Leave reviews & ratings
-- Manage bookings
+</details>
+
+<details>
+<summary><b>🙋 Tenant</b></summary>
+
+- Browse and search approved properties
+- Filter and sort by preferences
+- Save properties to favorites
+- Submit booking requests
+- Pay reservation fees via Stripe
+- Leave reviews and ratings
+- Manage personal booking history
+
+</details>
 
 ---
 
@@ -68,169 +101,162 @@ SmartNest is a full-stack property rental and booking platform where property ow
 
 ### Frontend
 
-- Next.js
-- JavaScript
-- Tailwind CSS
-- HeroUI
-- Framer Motion
-- Recharts
-- Lucide React
+| Technology | Purpose |
+|---|---|
+| **Next.js** | React Framework (SSR/SSG) |
+| **Tailwind CSS** | Utility-First Styling |
+| **HeroUI** | Component Library |
+| **Framer Motion** | Animations & Transitions |
+| **Recharts** | Data Visualization |
+| **Lucide React** | Icon Library |
+| **Stripe.js** | Client-side Payment Handling |
 
 ### Backend
 
-- Express.js
-- MongoDB
-- Better Auth
-- JWT
-- Stripe
+| Technology | Purpose |
+|---|---|
+| **Express.js** | REST API Server |
+| **MongoDB** | NoSQL Database |
+| **Better Auth** | Session & Auth Management |
+| **JWT** | Stateless Authentication |
+| **Stripe** | Payment Processing |
 
 ---
 
-## 📦 Packages Used
+## 🚀 Getting Started
 
-### Frontend
+### Prerequisites
 
-- next
-- react
-- react-dom
-- tailwindcss
-- @heroui/react
-- @heroui/styles
-- better-auth
-- @better-auth/mongo-adapter
-- framer-motion
-- recharts
-- stripe
-- @stripe/stripe-js
-- react-hot-toast
-- react-icons
-- lucide-react
-- next-themes
-- mongodb
+- Node.js `v18+`
+- MongoDB (local or Atlas)
+- Stripe account (for payment integration)
 
-### Development
-
-- eslint
-- eslint-config-next
-
----
-
-## 🚀 Installation
-
-### Clone the repositories
+### 1. Clone the Repositories
 
 ```bash
-git clone <client-repository-link>
+# Clone the client
+git clone https://github.com/anika-chhoa/smart-nest.git
+cd smart-nest
 
-git clone <server-repository-link>
+# Clone the server
+git clone https://github.com/anika-chhoa/smart-nest-server.git
+cd smart-nest-server
 ```
 
-### Install dependencies
+### 2. Install Dependencies
 
 ```bash
+# In both client and server directories
 npm install
 ```
 
-### Create Environment Variables
+### 3. Configure Environment Variables
 
-Frontend
+See the [Environment Variables](#environment-variables) section below.
 
-```env
-NEXT_PUBLIC_API_URL
-
-NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
-```
-
-Backend
-
-```env
-PORT
-
-MONGODB_URI
-
-JWT_SECRET
-
-BETTER_AUTH_SECRET
-
-BETTER_AUTH_URL
-
-STRIPE_SECRET_KEY
-```
-
-### Run the project
-
-Frontend
+### 4. Run the Development Servers
 
 ```bash
+# Start the frontend (runs on http://localhost:3000)
 npm run dev
-```
 
-Backend
-
-```bash
+# Start the backend (runs on http://localhost:5000 or your configured PORT)
 npm run dev
 ```
 
 ---
 
-## 📊 Main Functionalities
+## 🔑 Environment Variables
 
-- User Registration & Login
-- Social Authentication
-- Secure JWT Authentication
-- Property CRUD Operations
-- Property Approval System
-- Booking Management
-- Stripe Payment Gateway
-- Favorite Properties
-- Review & Rating System
-- Dashboard Analytics
-- Monthly Earnings Report
-- Pagination
-- Backend Filtering
-- Backend Searching
-- Sorting
-- Responsive Dashboard
+### Frontend `.env.local`
+
+```env
+NEXT_PUBLIC_API_URL=your_backend_api_url
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=your_stripe_publishable_key
+```
+
+### Backend `.env`
+
+```env
+PORT=5000
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+BETTER_AUTH_SECRET=your_better_auth_secret
+BETTER_AUTH_URL=your_better_auth_url
+STRIPE_SECRET_KEY=your_stripe_secret_key
+```
+
+> ⚠️ **Never commit `.env` files to version control.** Add them to `.gitignore`.
+
+---
+
+## 📦 Key Dependencies
+
+### Frontend Packages
+
+```
+next · react · react-dom · tailwindcss · @heroui/react · better-auth
+framer-motion · recharts · stripe · @stripe/stripe-js
+react-hot-toast · react-icons · lucide-react · next-themes · mongodb
+```
+
+### Backend Packages
+
+```
+express · mongodb · better-auth · @better-auth/mongo-adapter · jsonwebtoken · stripe
+```
 
 ---
 
 ## 📱 Responsive Design
 
-The application is fully responsive and optimized for:
+SmartNest is fully optimized across all screen sizes:
 
-- Desktop
-- Laptop
-- Tablet
-- Mobile
+```
+✅ Mobile      ✅ Tablet      ✅ Laptop      ✅ Desktop
+```
 
 ---
 
 ## 🔒 Security
 
-- JWT Authentication
-- Better Auth Session Management
-- Protected API Routes
-- Role-Based Authorization
-- Environment Variable Protection
-- Secure MongoDB Credentials
+- ✅ JWT-based stateless authentication
+- ✅ Better Auth session management
+- ✅ Role-based route protection
+- ✅ Environment variable encryption
+- ✅ Secure MongoDB credential handling
+- ✅ Protected API endpoints
 
 ---
 
-## 🔮 Future Improvements
+## 🔮 Roadmap
 
-- Property Wishlist Notifications
-- Email Notifications
-- Real-time Chat
-- Property Recommendation System
-- Dark Mode
-- Google Maps Integration
-- Multi-language Support
+- [ ] 🔔 Property Wishlist Notifications
+- [ ] 📧 Email Notifications (Booking, Approval)
+- [ ] 💬 Real-time Chat (Owner ↔ Tenant)
+- [ ] 🤖 Property Recommendation System (AI-based)
+- [ ] 🌙 Dark Mode Support
+- [ ] 🗺️ Google Maps Integration
+- [ ] 🌍 Multi-language Support
 
 ---
 
 ## 👨‍💻 Author
 
-**Anika Mizan**
+<div align="center">
 
-If you like this project, feel free to ⭐ the repository.
-````
+**Md Shakibul Islam**
+
+If you found this project helpful, please consider giving it a ⭐ — it means a lot!
+
+[![GitHub](https://img.shields.io/badge/GitHub-anika--chhoa-181717?style=for-the-badge&logo=github)](https://github.com/anika-chhoa)
+
+</div>
+
+---
+
+<div align="center">
+
+Made with ❤️ by **Md Shakibul Islam**
+
+</div>
