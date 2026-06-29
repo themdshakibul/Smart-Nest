@@ -57,8 +57,8 @@ export default function RentalStatistics() {
 
   return (
     <section className="py-24 bg-midnight-emerald text-[var(--on-primary)] transition-colors duration-300">
-      <div className="max-w-[1280px] mx-auto px-6 md:px-12">
-        <motion.div 
+      <div className="container mx-auto px-6 md:px-12">
+        <motion.div
           className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center"
           initial="hidden"
           whileInView="visible"
@@ -71,7 +71,7 @@ export default function RentalStatistics() {
               <div className="font-heading text-5xl md:text-6xl font-bold text-champagne mb-2 tracking-tight">
                 <Counter value={stat.target} suffix={stat.suffix} />
               </div>
-              
+
               {/* Tracking Label */}
               <p className="font-body text-sm font-medium uppercase tracking-[0.2em] opacity-60">
                 {stat.label}

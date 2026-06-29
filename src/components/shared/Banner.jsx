@@ -76,7 +76,7 @@ export default function Banner() {
   return (
     <section className="relative min-h-screen flex flex-col justify-center pt-24 pb-12 overflow-hidden">
       {/* Background Underlay Graphics with Initial Fade-In */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, scale: 1.1 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.7, ease: "easeOut" }}
@@ -92,11 +92,11 @@ export default function Banner() {
         <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-background/30 to-background/60" />
       </motion.div>
 
-      <motion.div 
+      <motion.div
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="relative z-10 max-w-7xl mx-auto px-6 w-full"
+        className="relative z-10 container mx-auto px-6 w-full"
       >
         {/* Animated Typography Headers */}
         <motion.div variants={itemVariants} className="max-w-3xl mb-12">
@@ -114,12 +114,11 @@ export default function Banner() {
         </motion.div>
 
         {/* Animated Search Bar Grid Container */}
-        <motion.div 
+        <motion.div
           variants={itemVariants}
-          className="bg-card/40 backdrop-blur-md p-6 rounded-2xl border border-border/40 shadow-xl max-w-6xl w-full"
+          className="bg-card/40 backdrop-blur-md p-6 rounded-2xl border border-border/40 shadow-xl max-w-7xl mx-auto w-full"
         >
           <div className="grid grid-cols-1 md:grid-cols-5 gap-4 items-center">
-            
             {/* 1. Location Input Field */}
             <div className="relative w-full">
               <span className="absolute left-3 top-1/2 -translate-y-1/2 text-muted z-10 pointer-events-none">
@@ -143,7 +142,9 @@ export default function Banner() {
             <div className="w-full">
               <Select
                 aria-label="Filter by Property Type"
-                onSelectionChange={(key) => updateSearchParam("propertyType", key)}
+                onSelectionChange={(key) =>
+                  updateSearchParam("propertyType", key)
+                }
               >
                 <Select.Trigger className="w-full bg-background rounded-xl border border-border/60 px-4 py-2.5 text-sm flex items-center justify-between text-muted font-body h-[40px]">
                   <Select.Value
@@ -157,16 +158,18 @@ export default function Banner() {
 
                 <Select.Popover className="bg-background border border-border rounded-xl shadow-xl p-1 min-w-[200px]">
                   <ListBox>
-                    {["All", "Villa", "Penthouse", "Apartment", "Mansion"].map((type) => (
-                      <ListBox.Item
-                        key={type}
-                        id={type}
-                        textValue={type}
-                        className="p-2 text-sm text-foreground hover:bg-card rounded-lg cursor-pointer font-body"
-                      >
-                        {type === "All" ? "All Types" : type}
-                      </ListBox.Item>
-                    ))}
+                    {["All", "Villa", "Penthouse", "Apartment", "Mansion"].map(
+                      (type) => (
+                        <ListBox.Item
+                          key={type}
+                          id={type}
+                          textValue={type}
+                          className="p-2 text-sm text-foreground hover:bg-card rounded-lg cursor-pointer font-body"
+                        >
+                          {type === "All" ? "All Types" : type}
+                        </ListBox.Item>
+                      ),
+                    )}
                   </ListBox>
                 </Select.Popover>
               </Select>
@@ -174,7 +177,9 @@ export default function Banner() {
 
             {/* 3. Max Price Filter */}
             <div className="relative w-full">
-              <span className="absolute left-4 top-1/2 -translate-y-1/2 text-muted text-sm font-body z-10 pointer-events-none">$</span>
+              <span className="absolute left-4 top-1/2 -translate-y-1/2 text-muted text-sm font-body z-10 pointer-events-none">
+                $
+              </span>
               <Input
                 aria-label="Maximum Budget Filter"
                 type="number"
@@ -192,7 +197,9 @@ export default function Banner() {
 
             {/* 4. Min Price Filter */}
             <div className="relative w-full">
-              <span className="absolute left-4 top-1/2 -translate-y-1/2 text-muted text-sm font-body z-10 pointer-events-none">$</span>
+              <span className="absolute left-4 top-1/2 -translate-y-1/2 text-muted text-sm font-body z-10 pointer-events-none">
+                $
+              </span>
               <Input
                 aria-label="Minimum Budget Filter"
                 type="number"
@@ -220,7 +227,6 @@ export default function Banner() {
                 <span>Search Estates</span>
               </motion.button>
             </div>
-
           </div>
         </motion.div>
       </motion.div>

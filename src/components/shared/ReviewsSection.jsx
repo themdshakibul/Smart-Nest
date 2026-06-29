@@ -23,10 +23,10 @@ const containerVariants = {
 // Smooth lift-up animation for individual items
 const cardVariants = {
   hidden: { opacity: 0, y: 25 },
-  show: { 
-    opacity: 1, 
-    y: 0, 
-    transition: { type: "spring", stiffness: 50, damping: 15 } 
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { type: "spring", stiffness: 50, damping: 15 },
   },
 };
 
@@ -46,11 +46,10 @@ export default function ReviewsSection() {
 
   return (
     <section className="py-24 bg-[var(--surface-container-low)] dark:bg-[var(--surface-container)]/60 transition-colors duration-300 overflow-hidden">
-      <div className="max-w-[1280px] mx-auto px-6 lg:px-10">
-        
+      <div className="container mx-auto px-6 lg:px-10">
         {/* Animated Headers */}
         <div className="text-center mb-16">
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: -10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -59,7 +58,7 @@ export default function ReviewsSection() {
           >
             What Tenants Say
           </motion.p>
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -71,7 +70,7 @@ export default function ReviewsSection() {
         </div>
 
         {/* Animated Grid Container */}
-        <motion.div 
+        <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="show"
@@ -94,21 +93,32 @@ export default function ReviewsSection() {
 }
 
 function ReviewCard({ review }) {
-  const { tenantName, tenantImage, tenantLocation, rating = 5, comment } = review;
+  const {
+    tenantName,
+    tenantImage,
+    tenantLocation,
+    rating = 5,
+    comment,
+  } = review;
 
   const clampedRating = Math.min(5, Math.max(0, Math.round(rating)));
 
   const initials = tenantName
-    ? tenantName.split(" ").map((w) => w[0]).slice(0, 2).join("").toUpperCase()
+    ? tenantName
+        .split(" ")
+        .map((w) => w[0])
+        .slice(0, 2)
+        .join("")
+        .toUpperCase()
     : "?";
 
   return (
-    <motion.div 
+    <motion.div
       variants={cardVariants}
-      whileHover={{ 
-        y: -6, 
+      whileHover={{
+        y: -6,
         scale: 1.015,
-        boxShadow: "0 12px 30px -10px rgba(0,0,0,0.08)"
+        boxShadow: "0 12px 30px -10px rgba(0,0,0,0.08)",
       }}
       transition={{ type: "spring", stiffness: 300, damping: 22 }}
       className="flex flex-col p-8 rounded-2xl border border-border/10 bg-card dark:bg-[var(--surface-container)] shadow-sm transition-colors duration-300 h-full"
@@ -120,7 +130,11 @@ function ReviewCard({ review }) {
             key={i}
             size={14}
             strokeWidth={0}
-            fill={i < clampedRating ? "var(--champagne-accent)" : "var(--outline-variant)"}
+            fill={
+              i < clampedRating
+                ? "var(--champagne-accent)"
+                : "var(--outline-variant)"
+            }
           />
         ))}
       </div>

@@ -8,17 +8,20 @@ const owners = [
   {
     name: "Julien Dupont",
     specialty: "Owner of 12+ Luxury Flats in Paris",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuApqTAP4AuzLooQdriTlTUvwDunYPcAm3jIS8OcHjTH9_gRRdZx6pR0oKunnTTpPadnPHvXRyG6PQCWRPYyLSnZV_r82M7ECVNsfO_rEgHib8bA2dUhUfjfiOwPGZQy_FOD1113AAuAZEGyQiEjpMBde7ntU-URDoPJhWQiYATJUNRuQjVnkCDv0ZegMR5BPMXdd6EhiUyiFesiYf-upDbZwz1kDMyr0tHnYEjar304c5xXC9y4pFexD-ciK4rAL8zzDlwR31CxJAKA",
+    image:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuApqTAP4AuzLooQdriTlTUvwDunYPcAm3jIS8OcHjTH9_gRRdZx6pR0oKunnTTpPadnPHvXRyG6PQCWRPYyLSnZV_r82M7ECVNsfO_rEgHib8bA2dUhUfjfiOwPGZQy_FOD1113AAuAZEGyQiEjpMBde7ntU-URDoPJhWQiYATJUNRuQjVnkCDv0ZegMR5BPMXdd6EhiUyiFesiYf-upDbZwz1kDMyr0tHnYEjar304c5xXC9y4pFexD-ciK4rAL8zzDlwR31CxJAKA",
   },
   {
     name: "Sophia Lorenzi",
     specialty: "Specialist in Tuscany Estates",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCWhfaMXQbPM02S-Zs7ESY9BVx5oiQtYKKzYOGcQaWMr_lauMC0hn0NBxkL9gUxW1sUVo3dVhQRWoLFM0b6AdxA5q7OSZWHtSGZuvOK3Dt8CiBx9mYMEuFirKvtahpN2FAKQoO5rUlbkbaSGXciihZ_43Ac6Q1tv0nmSaDazu9fIIghWdqZHDIi4YxTU7au2E6e52CL35Wz1awBYTB3iEKGuarAIDIUMo-cgyHKLoDivSPDqhN6gw2ufJwrUUcyNBEwHjVMXvni6Tom",
+    image:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuCWhfaMXQbPM02S-Zs7ESY9BVx5oiQtYKKzYOGcQaWMr_lauMC0hn0NBxkL9gUxW1sUVo3dVhQRWoLFM0b6AdxA5q7OSZWHtSGZuvOK3Dt8CiBx9mYMEuFirKvtahpN2FAKQoO5rUlbkbaSGXciihZ_43Ac6Q1tv0nmSaDazu9fIIghWdqZHDIi4YxTU7au2E6e52CL35Wz1awBYTB3iEKGuarAIDIUMo-cgyHKLoDivSPDqhN6gw2ufJwrUUcyNBEwHjVMXvni6Tom",
   },
   {
     name: "Alaric Sterling",
     specialty: "Curator of NYC Modern Penthouses",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBC4rE4onAH7dYr3mrCV1UeuMT5uIKZrwaPv4JCoAKs9yW9jHqSDsOjtbr-R8Lb7NQvY5T8oG7TgAiSEa2ZqFkoH5ZbpVWBn0pq48GFXVppwU52sWwokA22TNiDIEELl0Lq1tEgu5GeBblRFm-y1oKIlbBNHtbE2OpsC2PrQgKMHzDq-z7oDR_n7vJkzFx-kbUzKK66Cu-kWC_D5CMkfHPA8BRR9yS0AZlFFxQ9zazkhNd-bhB3WfPBSq-GoVOjxd59RxzWdhRQSFww",
+    image:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuBC4rE4onAH7dYr3mrCV1UeuMT5uIKZrwaPv4JCoAKs9yW9jHqSDsOjtbr-R8Lb7NQvY5T8oG7TgAiSEa2ZqFkoH5ZbpVWBn0pq48GFXVppwU52sWwokA22TNiDIEELl0Lq1tEgu5GeBblRFm-y1oKIlbBNHtbE2OpsC2PrQgKMHzDq-z7oDR_n7vJkzFx-kbUzKK66Cu-kWC_D5CMkfHPA8BRR9yS0AZlFFxQ9zazkhNd-bhB3WfPBSq-GoVOjxd59RxzWdhRQSFww",
   },
 ];
 
@@ -29,13 +32,17 @@ const containerVariants = {
 
 const itemVariants = {
   hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 1, ease: [0.215, 0.61, 0.355, 1] } },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 1, ease: [0.215, 0.61, 0.355, 1] },
+  },
 };
 
 export default function TrustedOwners() {
   return (
     <section className="py-24 bg-[var(--surface-container-low)] dark:bg-[var(--surface-container)]/60 transition-colors duration-300 overflow-hidden">
-      <div className="max-w-[1280px] mx-auto px-6 lg:px-10">
+      <div className="container mx-auto px-6 lg:px-10">
         {/* Heading */}
         <motion.div
           initial="hidden"
@@ -92,9 +99,7 @@ export default function TrustedOwners() {
               </div>
 
               {/* Specialty */}
-              <p className="text-sm text-muted">
-                {owner.specialty}
-              </p>
+              <p className="text-sm text-muted">{owner.specialty}</p>
             </motion.div>
           ))}
         </motion.div>

@@ -10,7 +10,6 @@ import {
 import Image from 'next/image';
 
 const Profile = ({ user }) => {
-  console.log(user);
 
   // Fallback data handling if props are rendering asynchronously
   if (!user) {
